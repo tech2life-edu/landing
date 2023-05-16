@@ -1,5 +1,6 @@
 import config from "@config/config.json";
 import theme from "@config/theme.json";
+import {initHotjar} from "@config/hotjar";
 import Head from "next/head";
 import { useEffect, useState } from "react";
 import TagManager from "react-gtm-module";
@@ -29,6 +30,7 @@ const App = ({ Component, pageProps }) => {
       process.env.NODE_ENV === "production" &&
         config.params.tag_manager_id &&
         TagManager.initialize(tagManagerArgs);
+      process.env.NODE_ENV === 'production' && initHotjar();
     }, 5000);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
