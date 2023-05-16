@@ -12,7 +12,6 @@ import { getListPage } from "../lib/contentParser";
 const Home = ({ frontmatter }) => {
   const { banner, feature, services, workflow, call_to_action } = frontmatter;
   const { title } = config.site;
-  console.log(feature)
 
   return (
     <Base title={title}>
@@ -66,14 +65,23 @@ const Home = ({ frontmatter }) => {
                     alt=""
                   />
                 )}
+                <a href={item.linkedin}  target="_blank" rel="noreferrer">
                 <div className="mt-4">
                   {markdownify(item.name, "h3", "h5")}
+                  <Image
+                    className="mx-auto"
+                    src="/images/linkedin.png"
+                    width={30}
+                    height={30}
+                    alt={item.name}
+                  />
                   <p className="mt-3">{item.content}</p>
                 </div>
+                </a>
               </div>
             ))}
           </div>
-          <div className="mt-8 grid gap-x-8 gap-y-6 sm:grid-cols-1 lg:grid-cols-1">
+          {/* <div className="mt-8 grid gap-x-8 gap-y-6 sm:grid-cols-1 lg:grid-cols-1">
             
               <div
                 className="feature-card rounded-xl bg-white p-5 pb-8 text-center"
@@ -92,7 +100,7 @@ const Home = ({ frontmatter }) => {
                   <p className="mt-3">{feature.primaryFeature.content}</p>
                 </div>
               </div>
-          </div>
+          </div> */}
         </div>
       </section>
 
