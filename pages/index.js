@@ -27,6 +27,7 @@ const Home = ({ frontmatter }) => {
                   className="btn btn-primary mt-4"
                   href={banner.button.link}
                   rel={banner.button.rel}
+                  target="_blank"
                 >
                   {banner.button.label}
                 </Link>
@@ -148,6 +149,7 @@ const Home = ({ frontmatter }) => {
                     <Link
                       href={service?.button.link}
                       className="cta-link inline-flex items-center text-primary"
+                      target="_blank"
                     >
                       {service?.button.label}
                       <Image

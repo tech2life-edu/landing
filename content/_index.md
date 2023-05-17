@@ -5,7 +5,7 @@ banner:
   image: /images/banner-art.svg
   button:
     label: "¡Únete a la comunidad de Tech2Life hoy mismo!"
-    link: "https://discord.gg/fEhxAeZzPM"
+    link: "https://api.whatsapp.com/send?phone=%2B573005792037&text=%C2%A1Hola!%20Estoy%20interesado(a)%20en%20inscribirme%20a%20Tech2Life."
     enable: true
 
 # feature
@@ -98,5 +98,5 @@ call_to_action:
   button:
     enable: true
     label: "Ingresa ahora mismo!"
-    link: "https://discord.gg/fEhxAeZzPM"
+    link: "https://api.whatsapp.com/send?phone=%2B573005792037&text=%C2%A1Hola!%20Estoy%20interesado(a)%20en%20inscribirme%20a%20Tech2Life."
 ---
