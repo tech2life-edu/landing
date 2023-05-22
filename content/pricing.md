@@ -3,52 +3,53 @@ title: Pricing
 layout: pricing
 draft: false
 plans:
-- title: Basic Plan
-  subtitle: Best For Small Individuals
-  price: 49
+- title: Plan gratuito
+  subtitle: Ingresa a nuestra comunidad!
+  price: 0
   type: month
   features:
-    - Express Service
-    - Customs Clearance
-    - Time-Critical Services
+    - Conocer personas que estan estudiando
+    - Podras realizar preguntas a la comunidad
+    - Estaras enterado de todos nuestros eventos
   button:
-    label: Get started for free
-    link: "/contact"
+    label: Inicia ya!
+    link: "https://api.whatsapp.com/send?phone=%2B573005792037&text=%C2%A1Hola!%20Estoy%20interesado(a)%20en%20inscribirme%20a%20Tech2Life."
 
-- title: Professional Plan
-  subtitle: Best For Professionals
-  price: 69
-  type: month
+- title: Plan Mensual
+  subtitle: Descubre el camino hacia tu éxito profesional.
+  price: 15 usd
+  type: Mensual
   recommended: true
   features:
-    - Express Service
-    - Customs Clearance
-    - Time-Critical Services
-    - Cloud Service
-    - Best Dashboard
+    - Soporte de tutoría personalizada.
+    - Acceso a proyectos prácticos y experiencias de trabajo reales.
+    - Participación en eventos exclusivos y oportunidades de networking.
+    - Actualizaciones de contenido y acceso a nuevas tendencias y tecnologías.
   button:
-    label: Get started
-    link: "/contact"
+    label: Inicia ya!
+    link: "https://api.whatsapp.com/send?phone=%2B573005792037&text=%C2%A1Hola!%20Estoy%20interesado(a)%20en%20inscribirme%20a%20Tech2Life."
 
-- title: Business Plan
-  subtitle: Best For Large Individuals
-  price: 99
-  type: month
+- title: Plan Anual
+  subtitle: Domina el mundo digital.
+  price: 150 usd
+  type: Anual
+  recommended: true
   features:
-    - Express Service
-    - Customs Clearance
-    - Time-Critical Services
+    - Soporte de tutoría personalizada.
+    - Acceso a proyectos prácticos y experiencias de trabajo reales.
+    - Participación en eventos exclusivos y oportunidades de networking.
+    - Actualizaciones de contenido y acceso a nuevas tendencias y tecnologías.
   button:
-    label: Get started
-    link: "/contact"
+    label: Inicia ya!
+    link: "https://api.whatsapp.com/send?phone=%2B573005792037&text=%C2%A1Hola!%20Estoy%20interesado(a)%20en%20inscribirme%20a%20Tech2Life."
 
 call_to_action:
-  title: Need a larger plan?
-  content: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat tristique eget amet, tempus eu at consecttur.
+  title: Quieres saber mas?
+  content: Preguntanos cualquier duda que tengas y tambien puedes preguntar por nuestro programa de becas.
   image: '/images/cta.svg'
   button:
     enable: true
-    label: "Contact Us"
-    link: "/contact"
+    label: "Contactanos"
+    link: "https://api.whatsapp.com/send?phone=%2B573005792037&text=%C2%A1Hola!%20Estoy%20interesado(a)%20en%20inscribirme%20a%20Tech2Life"
     
 ---

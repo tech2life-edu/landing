@@ -86,9 +86,16 @@ services:
 
 # workflow
 workflow: 
-  title: "Experience the best workflow with us"
+  title: "Descubre el Mundo del Desarrollo y la Gestión Digital"
   image: "/images/banner.svg"
-  description: ""
+  programs: 
+    - desription: "UX/UI: Diseño Centrado en el Usuario y Creación de Interfaz de Usuario Atractiva."
+    - desription: "Project Manager: Planificación, Ejecución y Seguimiento de Proyectos Digitales."
+    - desription: "Product Manager: Desarrollo de Productos Exitosos y Estrategias de Mercadotecnia Digital."
+    - desription: "Calidad de Software QA: Garantía de Calidad en el Desarrollo de Software y Pruebas Efectivas."
+    - desription: "Fullstack Developer: Construcción de Aplicaciones Web Completas desde el Frontend hasta el Backend."
+  description: "UX/Ui, Project Manager, Product Manager, Calidad de Software QA, Fullstack Developer"
+  
 
 # call_to_action
 call_to_action:

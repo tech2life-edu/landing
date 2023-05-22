@@ -12,7 +12,7 @@ import { getListPage } from "../lib/contentParser";
 const Home = ({ frontmatter }) => {
   const { banner, feature, services, workflow, call_to_action } = frontmatter;
   const { title } = config.site;
-
+   
   return (
     <Base title={title}>
       {/* Banner */}
@@ -169,14 +169,17 @@ const Home = ({ frontmatter }) => {
       })}
 
       {/* workflow */}
-      {/* <section className="section pb-0">
+      <section className="section pb-0">
         <div className="mb-8 text-center">
           {markdownify(
             workflow.title,
             "h2",
-            "mx-auto max-w-[400px] font-bold leading-[44px]"
+            "mx-auto max-w-[800px] font-bold leading-[44px]"
           )}
-          {markdownify(workflow.description, "p", "mt-3")}
+          <br/>
+          {markdownify(workflow.description, "h4", "mt-3")}
+          
+          
         </div>
         <Image
           src={workflow.image}
@@ -184,7 +187,7 @@ const Home = ({ frontmatter }) => {
           width={1920}
           height={296}
         />
-      </section> */}
+      </section>
 
       {/* Cta */}
       <Cta cta={call_to_action} />
