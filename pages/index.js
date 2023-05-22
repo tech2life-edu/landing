@@ -1,6 +1,7 @@
 import config from "@config/config.json";
 import Base from "@layouts/Baseof";
 import Cta from "@layouts/components/Cta";
+import Pricing from "@layouts/components/Pricing";
 import { markdownify } from "@lib/utils/textConverter";
 import Image from "next/image";
 import Link from "next/link";
@@ -10,8 +11,9 @@ import "swiper/swiper.min.css";
 import { getListPage } from "../lib/contentParser";
 
 const Home = ({ frontmatter }) => {
-  const { banner, feature, services, workflow, call_to_action } = frontmatter;
+  const { banner, feature, services, workflow, call_to_action, pricing } = frontmatter;
   const { title } = config.site;
+  const pricingData = pricing
    
   return (
     <Base title={title}>
@@ -43,6 +45,26 @@ const Home = ({ frontmatter }) => {
             </div>
           </div>
         </div>
+      </section>
+      {/* workflow */}
+      <section className="section pb-0">
+        <div className="mb-8 text-center">
+          {markdownify(
+            workflow.title,
+            "h2",
+            "mx-auto max-w-[800px] font-bold leading-[44px]"
+          )}
+          <br/>
+          {markdownify(workflow.description, "h4", "mt-3")}
+          
+          
+        </div>
+        <Image
+          src={workflow.image}
+          alt="workflow image"
+          width={1920}
+          height={296}
+        />
       </section>
 
       {/* Features */}
@@ -167,27 +189,8 @@ const Home = ({ frontmatter }) => {
           </section>
         );
       })}
+      <Pricing data={pricingData} />
 
-      {/* workflow */}
-      <section className="section pb-0">
-        <div className="mb-8 text-center">
-          {markdownify(
-            workflow.title,
-            "h2",
-            "mx-auto max-w-[800px] font-bold leading-[44px]"
-          )}
-          <br/>
-          {markdownify(workflow.description, "h4", "mt-3")}
-          
-          
-        </div>
-        <Image
-          src={workflow.image}
-          alt="workflow image"
-          width={1920}
-          height={296}
-        />
-      </section>
 
       {/* Cta */}
       <Cta cta={call_to_action} />

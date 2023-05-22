@@ -30,7 +30,7 @@ plans:
     link: "https://api.whatsapp.com/send?phone=%2B573005792037&text=%C2%A1Hola!%20Estoy%20interesado(a)%20en%20inscribirme%20a%20Tech2Life."
 
 - title: Plan Anual
-  subtitle: Domina el mundo digital.
+  subtitle: Domina el mundo digital. y ahorra 30 usd
   price: 150 usd
   type: Anual
   recommended: true
