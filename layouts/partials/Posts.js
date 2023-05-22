@@ -41,7 +41,7 @@ const Posts = ({ posts }) => {
               href={`/${blog_folder}/${posts[0].slug}`}
               rel=""
             >
-              Read More
+              Ver más
             </Link>
           </div>
         </div>
@@ -71,7 +71,7 @@ const Posts = ({ posts }) => {
             href={`/${blog_folder}/${post.slug}`}
             rel=""
           >
-            Read More
+            Ver más
           </Link>
         </div>
       ))}
