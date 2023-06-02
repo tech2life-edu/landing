@@ -25,13 +25,12 @@ const App = ({ Component, pageProps }) => {
   const tagManagerArgs = {
     gtmId: config.params.tag_manager_id,
   };
+  console.log(tagManagerArgs)
   useEffect(() => {
-    setTimeout(() => {
-      process.env.NODE_ENV === "production" &&
+    process.env.NODE_ENV === "production" &&
         config.params.tag_manager_id &&
         TagManager.initialize(tagManagerArgs);
       process.env.NODE_ENV === 'production' && initHotjar();
-    }, 5000);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
