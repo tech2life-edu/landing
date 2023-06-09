@@ -21,7 +21,7 @@ Además de esto, es demasiado bueno tener proyectos reales de práctica, pues se
 
 En general, Tech2Life ha sido una gran experiencia, y me alegra ser parte de esto."
   features:
-  - name: "Cristian peña"
+  - name: "Cristian Peña"
     icon: "/images/estudiantes/cristianpena.png"
     linkedin: "https://www.linkedin.com/in/cristiancamilopena/"
     content: "A mis 34 años decidí dar un giro en mi vida profesional, luego de trabajar por más de 10 años en un campo totalmente diferente, comencé a perseguir mi sueño de ingresar a la industria IT. En esta búsqueda encontré en Tech2life el mejor aliado para acelerar mi aprendizaje, con un roadmap de recursos valiosos, mentorías con referentes de la industria y lo mejor, una simulación del entorno laboral para aplicar en proyectos lo aprendido. Cada día reafirmo que tomé la decisión correcta de ingresar a Tech2life"
@@ -29,7 +29,7 @@ En general, Tech2Life ha sido una gran experiencia, y me alegra ser parte de est
     icon: "/images/estudiantes/cristianespana.png"
     linkedin: "https://www.linkedin.com/in/cristian-camilo-rodriguez-dev/"
     content: "Tech2life me brindó la oportunidad de obtener mi primera experiencia laboral en un entorno simulado, donde pude desarrollar mis habilidades a través de proyectos y rutas de aprendizaje. Además, aprendí valiosas habilidades blandas para liderar y trabajar en equipo en el mundo de las TI. Gracias a esta formación, logré conseguir mi primer empleo con éxito."
-  - name: "Karina aviardi"
+  - name: "Karina Aviardi"
     icon: "/images/estudiantes/karina.png"
     linkedin: "https://www.linkedin.com/in/karina-avila-/"
     content: "Soy consciente de que sin Tech2Life no estaría en el momento en el que estoy. También aprendí mucho del equipo, al ver sus dificultades o avances, me dio un acercamiento a la realidad. El uso de las herramientas de comunicación internas es algo que me ha ayudado mucho, o sea, ya soy una PjM. 😎🔥 Las mentorías son lo que más resalto. Hablar y perder el miedo en estas mentorías me hace la vida más fácil en mi trabajo. Estudié ingeniería civil y trabajé en esta área durante 4 años, guiando a mi equipo de trabajo, resolviendo inconvenientes y buscando soluciones técnicas para lograr culminar un proyecto en el tiempo y con el presupuesto establecido. Sin embargo, el gremio de la construcción es muy demandante y ahora, con una sonrisa gigante en mi rostro, puedo decir que hago lo mismo sin botas y sin casco, con empatía y conciencia, y con la garantía de seguir aprendiendo herramientas para ser más ágiles y empáticos con las personas que trabajarán conmigo."

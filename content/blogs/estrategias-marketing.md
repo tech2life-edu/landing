@@ -15,7 +15,7 @@ En el mundo digital actual, contar con sólidas estrategias de marketing es esen
 
 Antes de comenzar cualquier estrategia de marketing digital, es fundamental comprender a quién te diriges. Define a tu público objetivo con precisión, identificando sus características demográficas, intereses, comportamientos y necesidades. Esto te permitirá adaptar tus mensajes y enfoque de marketing para generar un mayor impacto.
 
-### Define tu público objetivo:
+### Redes Sociales:
 
 Las redes sociales se han convertido en una poderosa herramienta para el marketing digital. Crea perfiles profesionales en las plataformas relevantes para tu negocio y genera contenido relevante y atractivo para tu audiencia. Interactúa con tus seguidores, responde a sus preguntas y comentarios, y utiliza las funciones publicitarias para ampliar tu alcance y promover tu negocio.
 
