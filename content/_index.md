@@ -125,7 +125,7 @@ pricing:
 
   - title: Plan Mensual
     subtitle: Descubre el camino hacia tu éxito profesional.
-    price: 15 usd
+    price: 25 usd
     type: Mensual
     recommended: true
     features:
@@ -140,7 +140,7 @@ pricing:
 
   - title: Plan Anual
     subtitle: Domina el mundo digital y ahorra 30 usd.
-    price: 150 usd
+    price: 250 usd
     type: Anual
     recommended: true
     features:
