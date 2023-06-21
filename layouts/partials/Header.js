@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import React, { useState } from "react";
 
-const Header = () => {
+const Header = ({hupspotPopup}) => {
   //router
   const router = useRouter();
 
@@ -97,22 +97,29 @@ const Header = () => {
             ))}
             {enable && (
               <li className="md:hidden">
-                <Link
+                <button onClick={hupspotPopup}  className="btn btn-primary z-0 py-[14px]">{label}</button>
+                {/* <Link
                   className="btn btn-primary z-0 py-[14px]"
                   href={link}
                   rel=""
                 >
                   {label}
-                </Link>
+                </Link> */}
               </li>
             )}
           </ul>
         </div>
         {enable && (
           <div className="d-flex order-1 ml-auto hidden min-w-[200px] items-center justify-end md:ml-0 md:flex md:order-2">
-            <Link className="btn btn-primary z-0 py-[14px]" href={link} rel="" target="_blank">
+            {hupspotPopup ? (
+              <button onClick={hupspotPopup}  className="btn btn-primary z-0 py-[14px]">{label}</button>
+            ): (
+              <Link className="btn btn-primary z-0 py-[14px]" href={link} rel="" target="_blank">
               {label}
             </Link>
+            )}
+            
+            
           </div>
         )}
       </nav>

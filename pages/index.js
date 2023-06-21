@@ -1,6 +1,8 @@
+import { useState } from 'react';
 import config from "@config/config.json";
 import Base from "@layouts/Baseof";
 import Cta from "@layouts/components/Cta";
+import HubspotFormPopup  from "@layouts/components/HubspotFormPopup";
 import Pricing from "@layouts/components/Pricing";
 import { markdownify } from "@lib/utils/textConverter";
 import Image from "next/image";
@@ -14,9 +16,14 @@ const Home = ({ frontmatter }) => {
   const { banner, feature, services, workflow, call_to_action, pricing } = frontmatter;
   const { title } = config.site;
   const pricingData = pricing
+  const [showPopup, setShowPopup] = useState(false);
+
+  const handleButtonClick = () => {
+    setShowPopup(true);
+  };
    
   return (
-    <Base title={title}>
+    <Base title={title} hupspotPopup={handleButtonClick}>
       {/* Banner */}
       <section className="section pb-[50px]">
         <div className="container">
@@ -24,15 +31,17 @@ const Home = ({ frontmatter }) => {
             <div className="mx-auto lg:col-10">
               <h1 className="font-primary font-bold">{banner.title}</h1>
               <p className="mt-4">{markdownify(banner.content)}</p>
+
               {banner.button.enable && (
-                <Link
-                  className="btn btn-primary mt-4"
-                  href={banner.button.link}
-                  rel={banner.button.rel}
-                  target="_blank"
-                >
-                  {banner.button.label}
-                </Link>
+                <button onClick={handleButtonClick} className="btn btn-primary mt-4">{banner.button.label}</button>
+                // <Link
+                 
+                //   href={banner.button.link}
+                //   rel={banner.button.rel}
+                //   target="_blank"
+                // >
+                  
+                // </Link>
               )}
               {/* <Image
                 className="mx-auto mt-12"
@@ -189,11 +198,13 @@ const Home = ({ frontmatter }) => {
           </section>
         );
       })}
-      <Pricing data={pricingData} />
+      
+      <Pricing data={pricingData} hupspotPopup={handleButtonClick}/>
+    <HubspotFormPopup isActive={showPopup} setIsActive={setShowPopup}/>
 
 
       {/* Cta */}
-      <Cta cta={call_to_action} />
+      <Cta cta={call_to_action} hupspotPopup={handleButtonClick} />
     </Base>
   );
 };

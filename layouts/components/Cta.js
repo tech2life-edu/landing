@@ -2,7 +2,7 @@ import { markdownify } from "@lib/utils/textConverter";
 import Image from "next/image";
 import Link from "next/link";
 
-function Cta({ cta }) {
+function Cta({ cta, hupspotPopup }) {
   return (
     <section className="section px-4">
       <div className="section container rounded-xl shadow">
@@ -20,14 +20,15 @@ function Cta({ cta }) {
             <h2>{cta?.title}</h2>
             <p className="mt-6">{markdownify(cta?.content)}</p>
             {cta.button.enable && (
-              <Link
-                className="btn btn-primary mt-4"
-                href={cta.button.link}
-                rel={cta.button.rel}
-                target="_blank"
-              >
-                {cta.button.label}
-              </Link>
+              <button onClick={hupspotPopup} className="btn btn-primary mt-4">{cta.button.label}</button>
+              // <Link
+              //   className="btn btn-primary mt-4"
+              //   href={cta.button.link}
+              //   rel={cta.button.rel}
+              //   target="_blank"
+              // >
+              //   {cta.button.label}
+              // </Link>
             )}
           </div>
         </div>

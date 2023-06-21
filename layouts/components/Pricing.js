@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-function Pricing({ data }) {
+function Pricing({ data, hupspotPopup }) {
   const {title, plans 
   } = data;
   return (
@@ -32,7 +32,10 @@ function Pricing({ data }) {
                       </li>
                     ))}
                   </ul>
-                  <Link
+                  <button onClick={hupspotPopup} className={`btn mt-5 ${
+                      plan.recommended ? "btn-primary" : "btn-outline-primary"
+                    }`}>{plan.button.label}</button>
+                  {/* <Link
                     className={`btn mt-5 ${
                       plan.recommended ? "btn-primary" : "btn-outline-primary"
                     }`}
@@ -40,7 +43,7 @@ function Pricing({ data }) {
                     rel={plan.button.rel}
                   >
                     {plan.button.label}
-                  </Link>
+                  </Link> */}
                 </div>
               </div>
             ))}

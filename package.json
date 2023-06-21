@@ -27,6 +27,7 @@
     "react-lite-youtube-embed": "^2.3.52",
     "rehype-slug": "^5.1.0",
     "remark-gfm": "^3.0.1",
+    "sweetalert2": "^11.7.12",
     "swiper": "^8.4.5"
   },
   "devDependencies": {
