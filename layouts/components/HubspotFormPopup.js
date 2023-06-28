@@ -26,14 +26,25 @@ const HubspotFormPopup = ({ isActive, setIsActive }) => {
             window.hbspt.forms.create({
               portalId: '39943186',
               formId: 'bc2b5abb-6126-48a5-a804-d44621e0ac71',
-              target: '#hubspotPopup'
+              target: '#hubspotPopup',
+              onFormReady: (form) => {
+                const urlParams = new URLSearchParams(window.location.search);
+                const bdrValue = urlParams.get('bdr');
+                console.log(bdrValue)
+                // Set the hidden field value
+                const hiddenField = form.querySelector('input[name="vendedor"]');
+                console.log(hiddenField)
+                if (hiddenField) {
+                  hiddenField.value = bdrValue;
+                }
+              }
             });
           }
         };
       },
       willClose: () => {
         setPopupVisible(false);
-        setIsActive(false)
+        setIsActive(false);
       }
     });
   };
