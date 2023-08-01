@@ -1,10 +1,28 @@
 import config from "@config/config.json";
+import { useForm } from "@lib/hooks/useForm";
 import { markdownify } from "@lib/utils/textConverter";
 
 const Checkout = ({ data }) => {
     const { frontmatter } = data;
     const { title, info } = frontmatter;
     const { contact_form_action } = config.params;
+
+    const { id, name, email, phone, document_type, document, user_reference, amount, currency, state, city, zip_code, full_address, onInputChange } = useForm({
+        id: '',
+        name: '',
+        email: '',
+        phone: '',
+        document_type: '',
+        document: '',
+        user_reference: '',
+        amount: '',
+        currency: '',
+        state: '',
+        city: '',
+        zip_code: '',
+        full_address: ''
+    })
+    console.log(document_type)
 
     return (
         <section className="pt-8 pb-8 md:section">
@@ -24,6 +42,8 @@ const Checkout = ({ data }) => {
                                     type="text"
                                     placeholder="Nombres y Apellidos"
                                     required
+                                    onChange={onInputChange}
+                                    value={name}
                                 />
                             </div>
                             <div className="mb-3 flex flex-col sm:flex-row sm:gap-1 justify-between">
@@ -33,6 +53,8 @@ const Checkout = ({ data }) => {
                                     type="email"
                                     placeholder="Tu correo"
                                     required
+                                    onChange={onInputChange}
+                                    value={email}
                                 />
                                 <input
                                     className="form-input w-full rounded"
@@ -40,6 +62,8 @@ const Checkout = ({ data }) => {
                                     type="tel"
                                     placeholder="Celular"
                                     required
+                                    onChange={onInputChange}
+                                    value={phone}
                                 />
                             </div>
 
@@ -48,7 +72,9 @@ const Checkout = ({ data }) => {
                                     className="form-input w-full rounded mb-3 sm:mb-0"
                                     name="document_type"
                                     required
-                                    defaultValue={''}
+                                    defaultValue={document_type}
+                                    onChange={onInputChange}
+                                // value={document_type}
                                 >
                                     {/* agregar validación para el string vacio */}
                                     <option disabled value='' >Tipo de Documento</option>
@@ -64,6 +90,8 @@ const Checkout = ({ data }) => {
                                     type="text"
                                     placeholder="Número de documento"
                                     required
+                                    onChange={onInputChange}
+                                    value={document}
                                 />
                             </div>
                             <div className="mb-3">
@@ -73,6 +101,8 @@ const Checkout = ({ data }) => {
                                     type="text"
                                     placeholder="Dirección"
                                     required
+                                    onChange={onInputChange}
+                                    value={full_address}
                                 />
                             </div>
                             <div className="mb-3 flex flex-col sm:flex-row sm:gap-1 justify-between">
@@ -82,6 +112,8 @@ const Checkout = ({ data }) => {
                                     type="text"
                                     placeholder="Departamento"
                                     required
+                                    onChange={onInputChange}
+                                    value={state}
                                 />
                                 <input
                                     className="form-input w-full rounded"
@@ -89,6 +121,8 @@ const Checkout = ({ data }) => {
                                     type="text"
                                     placeholder="Ciudad"
                                     required
+                                    onChange={onInputChange}
+                                    value={city}
                                 />
                             </div>
 
@@ -99,6 +133,8 @@ const Checkout = ({ data }) => {
                                     type="text"
                                     placeholder="Código postal"
                                     required
+                                    onChange={onInputChange}
+                                    value={zip_code}
                                 />
                             </div>
 
@@ -123,15 +159,5 @@ const Checkout = ({ data }) => {
         </section>
     );
 }
-
-// export const getStaticProps = async () => {
-//     const homePage = await getListPage("content/checkout.md");
-//     const { frontmatter } = homePage;
-//     return {
-//         props: {
-//             frontmatter,
-//         },
-//     };
-// };
 
 export default Checkout;

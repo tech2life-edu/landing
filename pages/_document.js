@@ -1,5 +1,7 @@
 import config from "@config/config.json";
+import { store } from "@config/store/store";
 import { Head, Html, Main, NextScript } from "next/document";
+import { Provider } from "react-redux";
 
 const Document = () => {
   // destructuring items from config object
@@ -32,6 +34,7 @@ const Document = () => {
         <Main />
         {/* <TwSizeIndicator /> */}
         <NextScript />
+
       </body>
     </Html>
   );
