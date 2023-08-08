@@ -20,9 +20,24 @@ export const userSlice = createSlice({
         }
     },
     reducers: {
-        increment: (state, /* action */) => {
-            state.counter += 1;
+        addInfo: (state, { payload }) => {
+            state.id = 1,
+                state.name = payload.name,
+                state.email = payload.email,
+                state.phone = payload.phone,
+                state.document_type = payload.document_type,
+                state.document = payload.document,
+                state.user_reference = 1,
+                state.amount = 59,
+                state.currency = 'USD',
+                state.adress = {
+                    state: payload.state,
+                    city: payload.city,
+                    zip_code: payload.zip_code,
+                    full_address: payload.full_address
+                }
         },
+
     }
 });
-export const { increment } = userSlice.actions;
+export const { addInfo } = userSlice.actions;
