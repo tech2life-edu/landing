@@ -1,10 +1,12 @@
 import config from "@config/config.json";
 import theme from "@config/theme.json";
-import {initHotjar} from "@config/hotjar";
+import { initHotjar } from "@config/hotjar";
 import Head from "next/head";
 import { useEffect, useState } from "react";
 import TagManager from "react-gtm-module";
 import "styles/style.scss";
+import { Provider } from "react-redux";
+import { store } from "@config/store/store";
 
 const App = ({ Component, pageProps }) => {
   // default theme setup
@@ -15,8 +17,7 @@ const App = ({ Component, pageProps }) => {
   const [fontcss, setFontcss] = useState();
   useEffect(() => {
     fetch(
-      `https://fonts.googleapis.com/css2?family=${pf}${
-        sf ? "&family=" + sf : ""
+      `https://fonts.googleapis.com/css2?family=${pf}${sf ? "&family=" + sf : ""
       }&display=swap`
     ).then((res) => res.text().then((css) => setFontcss(css)));
   }, [pf, sf]);
@@ -28,9 +29,9 @@ const App = ({ Component, pageProps }) => {
   console.log(tagManagerArgs)
   useEffect(() => {
     process.env.NODE_ENV === "production" &&
-        config.params.tag_manager_id &&
-        TagManager.initialize(tagManagerArgs);
-      process.env.NODE_ENV === 'production' && initHotjar();
+      config.params.tag_manager_id &&
+      TagManager.initialize(tagManagerArgs);
+    process.env.NODE_ENV === 'production' && initHotjar();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -54,7 +55,9 @@ const App = ({ Component, pageProps }) => {
           content="width=device-width, initial-scale=1, maximum-scale=5"
         />
       </Head>
-      <Component {...pageProps} />
+      <Provider store={store}>
+        <Component {...pageProps} />
+      </Provider>
     </>
   );
 };
